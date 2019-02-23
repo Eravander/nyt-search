@@ -19,3 +19,8 @@ $.ajax({
     });
   }
   articleSearch();
+
+  $(document).on("click", "#submitButton", articleSearch());
+  $(document).on("click", "#clearButton", clearSearch())
+
+  clearSearch
