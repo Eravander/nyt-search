@@ -1,3 +1,6 @@
+// var searchTerm = $("#searchTerm").val();
+// var startYear = $("#startYear").val();
+// var endYear = $("#endYear").val();
 var searchTerm = "Nixon"
 var startYear = 1975;
 var endYear = 1980;
@@ -12,10 +15,17 @@ $.ajax({
       var results = object.response.docs;
       console.log(results)
       for (var i = 0; i < results.length; i++) {
-      console.log(results[i].headline.main)
-      console.log(results[i].byline.original)
-      console.log(results[i].snippet)
+      var articleDiv = $("<div>")
+      var headline = $("<h2>").text(results[i].headline.main);
+      var author = $("<h3>").text(results[i].byline.original);
+      var snippet = $("<p>").text(results[i].snippet);
+
+      $("#articles").append(articleDiv);
+      articleDiv.append(headline);
+      articleDiv.append(author);
+      articleDiv.append(snippet);
+
       }
     });
   }
-  articleSearch();
+  articleSearch()
