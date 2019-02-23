@@ -1,0 +1,17 @@
+.jumbotron {
+    background: #4aaaa5;
+    color: #fff;
+}
+
+.jumbotron img {
+    width: 100px;
+    height: 100px;
+}
+
+.form-group {
+    font-weight: bold;
+}
+
+.panel-heading {
+    background: #777;
+}
